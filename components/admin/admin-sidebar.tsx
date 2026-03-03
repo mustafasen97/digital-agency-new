@@ -174,6 +174,13 @@ const navGroups: { label: string; items: NavItem[] }[] = [
     items: [
       { label: "Analitik", icon: BarChart2, href: "/admin/analytics" },
       {
+        label: "Kod & İntegrasyonlar",
+        icon: Code2,
+        children: [
+          { label: "Script Yönetimi", icon: Code2, href: "/admin/scripts" },
+        ],
+      },
+      {
         label: "Ayarlar",
         icon: Settings,
         children: [
