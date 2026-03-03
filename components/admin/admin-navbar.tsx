@@ -1,8 +1,9 @@
 "use client"
 
-import { Bell, Search, ChevronDown, ExternalLink } from "lucide-react"
+import { Bell, Search, ChevronDown, ExternalLink, Moon, Sun } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useAdminTheme } from "@/lib/admin-theme-context"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,6 +45,7 @@ const breadcrumbMap: Record<string, string> = {
 
 export default function AdminNavbar() {
   const pathname = usePathname()
+  const { theme, toggleTheme } = useAdminTheme()
   const segments = pathname.split("/").filter(Boolean)
 
   const breadcrumbs = segments.map((seg, i) => ({
@@ -89,6 +91,15 @@ export default function AdminNavbar() {
         <ExternalLink size={14} />
         <span>Siteyi Görüntüle</span>
       </Link>
+
+      {/* Theme toggle */}
+      <button
+        onClick={toggleTheme}
+        className="p-2 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors"
+        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      >
+        {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+      </button>
 
       {/* Notifications */}
       <button className="relative p-2 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
