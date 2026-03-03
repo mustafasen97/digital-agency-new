@@ -106,7 +106,7 @@ export default function AdminDashboard() {
         {statCards.map((card) => (
           <div
             key={card.label}
-            className="bg-[var(--admin-bg-card)] border border-[var(--admin-border)] rounded-xl p-5 group transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+            className="bg-[var(--admin-bg-card)] border border-[var(--admin-border)] rounded-xl p-5 group transition-all hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(37,99,235,0.08)]"
           >
             <div className="flex items-start justify-between">
               <div>
@@ -118,7 +118,7 @@ export default function AdminDashboard() {
                   {card.value}
                 </p>
               </div>
-              <div className="p-2 rounded-lg bg-white/5">
+              <div className="p-2 rounded-lg bg-[var(--admin-accent-subtle)]">
                 <card.icon size={20} className="text-[var(--admin-accent)]" />
               </div>
             </div>
@@ -155,8 +155,8 @@ export default function AdminDashboard() {
             <AreaChart data={visitorData} margin={{ top: 4, right: 4, left: -16, bottom: 0 }}>
               <defs>
                 <linearGradient id="visitGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#F59E0B" stopOpacity={0.25} />
-                  <stop offset="95%" stopColor="#F59E0B" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#2563EB" stopOpacity={0.2} />
+                  <stop offset="95%" stopColor="#2563EB" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--admin-border)" vertical={false} />
@@ -176,11 +176,11 @@ export default function AdminDashboard() {
               <Area
                 type="monotone"
                 dataKey="visitors"
-                stroke="#F59E0B"
+                stroke="#2563EB"
                 strokeWidth={2}
                 fill="url(#visitGradient)"
                 dot={false}
-                activeDot={{ r: 4, fill: "#F59E0B" }}
+                activeDot={{ r: 4, fill: "#2563EB" }}
               />
             </AreaChart>
           </ResponsiveContainer>
@@ -199,7 +199,7 @@ export default function AdminDashboard() {
               <Link
                 key={action.label}
                 href={action.href}
-                className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-all group"
+                className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-all group"
               >
                 <action.icon size={16} className="text-[var(--admin-accent)] shrink-0" />
                 <span className="flex-1">{action.label}</span>
@@ -250,7 +250,7 @@ export default function AdminDashboard() {
             {recentMessages.map((msg) => (
               <div
                 key={msg.id}
-                className={`flex items-center gap-4 px-6 py-3 hover:bg-white/5 transition-colors ${
+                className={`flex items-center gap-4 px-6 py-3 hover:bg-[var(--admin-hover)] transition-colors ${
                   !msg.read ? "border-l-2 border-[var(--admin-accent)]" : ""
                 }`}
               >
@@ -286,7 +286,7 @@ export default function AdminDashboard() {
           </div>
           <div className="divide-y divide-[var(--admin-border)]">
             {recentContent.map((item) => (
-              <div key={item.id} className="flex items-center gap-4 px-6 py-3 hover:bg-white/5 transition-colors">
+              <div key={item.id} className="flex items-center gap-4 px-6 py-3 hover:bg-[var(--admin-hover)] transition-colors">
                 <div className="shrink-0">
                   <FileText size={16} style={{ color: typeColors[item.type] }} />
                 </div>

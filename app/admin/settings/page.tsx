@@ -57,7 +57,7 @@ export default function SettingsPage() {
         title="Ayarlar"
         description="Site genel ayarlarını ve sistem konfigürasyonunu yönetin"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Save size={14} />
             Kaydet
           </button>
@@ -104,7 +104,7 @@ export default function SettingsPage() {
                 <input type="text" defaultValue="https://webtasarimevi.com.tr" readOnly className={`${inputCls} flex-1 opacity-70`} />
                 <button
                   onClick={copyUrl}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg border border-[var(--admin-border)] text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors shrink-0"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg border border-[var(--admin-border)] text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors shrink-0"
                 >
                   {copied ? <Check size={14} className="text-[var(--admin-success)]" /> : <Copy size={14} />}
                 </button>
@@ -207,7 +207,7 @@ export default function SettingsPage() {
             </select>
           </div>
           <div className="pt-2">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[var(--admin-border)] text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[var(--admin-border)] text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
               Test E-postası Gönder
             </button>
           </div>
@@ -280,7 +280,7 @@ export default function SettingsPage() {
                 <p className="text-sm font-medium text-[var(--admin-text-primary)]">Tüm İçeriği Dışa Aktar</p>
                 <p className="text-xs text-[var(--admin-text-muted)] mt-0.5">Tüm içerik ve ayarları JSON olarak indir</p>
               </div>
-              <button className="px-4 py-2 text-xs font-medium rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+              <button className="px-4 py-2 text-xs font-medium rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
                 JSON İndir
               </button>
             </div>
@@ -289,7 +289,7 @@ export default function SettingsPage() {
                 <p className="text-sm font-medium text-[var(--admin-text-primary)]">Medya Arşivi İndir</p>
                 <p className="text-xs text-[var(--admin-text-muted)] mt-0.5">Tüm yüklenen dosyaları ZIP olarak indir (~240 MB)</p>
               </div>
-              <button className="px-4 py-2 text-xs font-medium rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+              <button className="px-4 py-2 text-xs font-medium rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
                 ZIP İndir
               </button>
             </div>

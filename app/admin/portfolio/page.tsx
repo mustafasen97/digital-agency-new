@@ -26,7 +26,7 @@ export default function PortfolioPage() {
         title="Portfolio Projeleri"
         description="Portföy projelerini yönetin"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Plus size={15} />
             Yeni Proje
           </button>
@@ -60,7 +60,7 @@ export default function PortfolioPage() {
             </thead>
             <tbody className="divide-y divide-[var(--admin-border)]">
               {filtered.map((proj) => (
-                <tr key={proj.id} className="hover:bg-white/5 transition-colors group">
+                <tr key={proj.id} className="hover:bg-[var(--admin-hover)] transition-colors group">
                   <td className="px-5 py-3.5">
                     <span className="text-[var(--admin-text-primary)] font-medium">{proj.title}</span>
                   </td>

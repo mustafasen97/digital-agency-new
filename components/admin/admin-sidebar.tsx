@@ -213,7 +213,7 @@ function SidebarItem({
                 onClick={() => setOpen(!open)}
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors group",
-                  "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5",
+                  "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]",
                   collapsed ? "justify-center" : "justify-between"
                 )}
               >
@@ -268,8 +268,8 @@ function SidebarItem({
               "flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all group relative",
               collapsed ? "justify-center" : "",
               isActive
-                ? "text-[var(--admin-accent)] bg-white/5 border-l-2 border-[var(--admin-accent)]"
-                : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5"
+                ? "text-[var(--admin-accent)] bg-[var(--admin-active-bg)] border-l-2 border-[var(--admin-accent)] font-medium"
+                : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]"
             )}
           >
             <item.icon size={18} className="shrink-0" />
@@ -349,7 +349,7 @@ export default function AdminSidebar() {
         <button
           onClick={() => setCollapsed(!collapsed)}
           className={cn(
-            "w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors",
+            "w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors",
             collapsed ? "justify-center" : ""
           )}
         >

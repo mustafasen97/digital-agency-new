@@ -64,7 +64,7 @@ export default function ServiceCategoriesPage() {
         action={
           <button
             onClick={openAdd}
-            className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors"
           >
             <Plus size={15} />
             Kategori Ekle
@@ -86,7 +86,7 @@ export default function ServiceCategoriesPage() {
           </thead>
           <tbody className="divide-y divide-[var(--admin-border)]">
             {categories.map((cat) => (
-              <tr key={cat.id} className="hover:bg-white/5 transition-colors group">
+              <tr key={cat.id} className="hover:bg-[var(--admin-hover)] transition-colors group">
                 <td className="px-3 py-3.5">
                   <GripVertical size={15} className="text-[var(--admin-border)] cursor-grab hover:text-[var(--admin-text-muted)] transition-colors" />
                 </td>
@@ -133,7 +133,7 @@ export default function ServiceCategoriesPage() {
                   <h3 className="text-base font-semibold text-[var(--admin-text-primary)]" style={{ fontFamily: "var(--font-syne)" }}>
                     {editId !== null ? "Kategori Düzenle" : "Kategori Ekle"}
                   </h3>
-                  <button onClick={() => setShowPanel(false)} className="p-1.5 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+                  <button onClick={() => setShowPanel(false)} className="p-1.5 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
                     <X size={16} />
                   </button>
                 </div>
@@ -148,10 +148,10 @@ export default function ServiceCategoriesPage() {
                   </div>
                 </div>
                 <div className="px-6 py-4 border-t border-[var(--admin-border)] flex gap-3">
-                  <button onClick={() => setShowPanel(false)} className="flex-1 py-2.5 rounded-lg border border-[var(--admin-border)] text-sm text-[var(--admin-text-muted)] hover:bg-white/5 transition-colors">
+                  <button onClick={() => setShowPanel(false)} className="flex-1 py-2.5 rounded-lg border border-[var(--admin-border)] text-sm text-[var(--admin-text-muted)] hover:bg-[var(--admin-hover)] transition-colors">
                     İptal
                   </button>
-                  <button onClick={save} className="flex-1 py-2.5 rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                  <button onClick={save} className="flex-1 py-2.5 rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
                     <Check size={14} />
                     Kaydet
                   </button>

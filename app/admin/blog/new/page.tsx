@@ -41,7 +41,7 @@ export default function NewBlogPostPage() {
         backHref="/admin/blog"
         action={
           <div className="flex items-center gap-2">
-            <button className="px-4 py-2 text-sm rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+            <button className="px-4 py-2 text-sm rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
               Taslak Kaydet
             </button>
             <button className="px-4 py-2 text-sm rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold transition-colors">
@@ -112,7 +112,7 @@ export default function NewBlogPostPage() {
                   {["H1", "H2", "H3", "B", "I", "U", "S", "Link", "Img", "Code", '" "', "UL", "OL"].map((btn) => (
                     <button
                       key={btn}
-                      className="px-2 py-1 text-xs rounded bg-white/5 text-[var(--admin-text-muted)] hover:bg-white/10 hover:text-[var(--admin-text-primary)] transition-colors font-mono"
+                      className="px-2 py-1 text-xs rounded bg-[var(--admin-bg-secondary)] text-[var(--admin-text-muted)] hover:bg-[var(--admin-hover)] hover:text-[var(--admin-text-primary)] transition-colors font-mono"
                     >
                       {btn}
                     </button>
@@ -194,8 +194,8 @@ export default function NewBlogPostPage() {
                   onClick={() => setStatus(s)}
                   className={`flex-1 py-2 text-xs font-medium transition-colors ${
                     status === s
-                      ? "bg-[var(--admin-accent)] text-black"
-                      : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5"
+                      ? "bg-[var(--admin-accent)] text-white"
+                      : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]"
                   }`}
                 >
                   {s === "draft" ? "Taslak" : s === "published" ? "Yayında" : "Planlandı"}

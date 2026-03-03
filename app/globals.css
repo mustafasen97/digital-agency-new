@@ -74,17 +74,21 @@
 
 /* ── Admin Panel Tokens ── */
 .admin-panel {
-  --admin-bg-primary: #0A0A0F;
-  --admin-bg-secondary: #111118;
-  --admin-bg-card: #16161F;
-  --admin-border: #1E1E2E;
-  --admin-accent: #F59E0B;
-  --admin-accent-hover: #D97706;
-  --admin-text-primary: #F8F8FF;
-  --admin-text-muted: #6B7280;
-  --admin-success: #10B981;
-  --admin-danger: #EF4444;
-  --admin-info: #3B82F6;
+  --admin-bg-primary: #EDF0F7;
+  --admin-bg-secondary: #E4E8F3;
+  --admin-bg-card: #FFFFFF;
+  --admin-border: #C5CCDE;
+  --admin-border-strong: #A8B2CC;
+  --admin-accent: #2563EB;
+  --admin-accent-hover: #1D4ED8;
+  --admin-accent-subtle: #EFF4FF;
+  --admin-text-primary: #1B2649;
+  --admin-text-muted: #5E6D8E;
+  --admin-success: #059669;
+  --admin-danger: #DC2626;
+  --admin-info: #0284C7;
+  --admin-hover: rgba(37,99,235,0.07);
+  --admin-active-bg: rgba(37,99,235,0.10);
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;

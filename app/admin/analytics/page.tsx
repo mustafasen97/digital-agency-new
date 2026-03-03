@@ -55,8 +55,8 @@ export default function AnalyticsPage() {
                 onClick={() => setPeriod(p.key as any)}
                 className={`px-4 py-2 text-xs font-medium transition-colors ${
                   period === p.key
-                    ? "bg-[var(--admin-accent)] text-black"
-                    : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5"
+                    ? "bg-[var(--admin-accent)] text-white"
+                    : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]"
                 }`}
               >
                 {p.label}
@@ -71,7 +71,7 @@ export default function AnalyticsPage() {
         {miniStats.map((stat) => (
           <div
             key={stat.label}
-            className="bg-[var(--admin-bg-card)] border border-[var(--admin-border)] rounded-xl p-5 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all"
+            className="bg-[var(--admin-bg-card)] border border-[var(--admin-border)] rounded-xl p-5 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(37,99,235,0.08)] transition-all"
           >
             <div className="flex items-center justify-between mb-3">
               <stat.icon size={18} style={{ color: stat.color }} />
@@ -228,7 +228,7 @@ export default function AnalyticsPage() {
           </thead>
           <tbody className="divide-y divide-[var(--admin-border)]">
             {analyticsData.pageStats.map((page) => (
-              <tr key={page.url} className="hover:bg-white/5 transition-colors">
+              <tr key={page.url} className="hover:bg-[var(--admin-hover)] transition-colors">
                 <td className="px-6 py-3.5 font-mono text-xs text-[var(--admin-accent)]">{page.url}</td>
                 <td className="px-6 py-3.5 text-[var(--admin-text-primary)] font-semibold">{page.views.toLocaleString()}</td>
                 <td className="px-6 py-3.5 text-[var(--admin-text-muted)] text-xs">{page.avgTime}</td>

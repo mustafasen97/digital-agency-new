@@ -27,7 +27,7 @@ export default function SEOPage() {
         title="SEO & Meta Ayarları"
         description="Arama motoru optimizasyonu ayarlarını yönetin"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Save size={15} />
             Kaydet
           </button>
@@ -42,8 +42,8 @@ export default function SEOPage() {
             onClick={() => setActiveTab(tab.key as any)}
             className={`flex-1 py-2 px-3 text-sm font-medium rounded-lg transition-colors ${
               activeTab === tab.key
-                ? "bg-[var(--admin-accent)] text-black"
-                : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5"
+                ? "bg-[var(--admin-accent)] text-white"
+                : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]"
             }`}
           >
             {tab.label}
@@ -143,7 +143,7 @@ export default function SEOPage() {
                     <div className="absolute top-0.5 right-0.5 w-3 h-3 rounded-full bg-white shadow" />
                   </div>
                 </div>
-                <button className="flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+                <button className="flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
                   <RefreshCw size={12} />
                   Yeniden Oluştur
                 </button>
@@ -173,7 +173,7 @@ export default function SEOPage() {
                 { page: "Blog", metaTitle: true, metaDesc: true, index: true },
                 { page: "İletişim", metaTitle: true, metaDesc: false, index: true },
               ].map((row) => (
-                <tr key={row.page} className="hover:bg-white/5 transition-colors group">
+                <tr key={row.page} className="hover:bg-[var(--admin-hover)] transition-colors group">
                   <td className="px-5 py-3.5 text-[var(--admin-text-primary)] font-medium">{row.page}</td>
                   <td className="px-5 py-3.5">
                     <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${

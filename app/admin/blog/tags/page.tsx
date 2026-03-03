@@ -70,7 +70,7 @@ export default function BlogTagsPage() {
           </div>
           <button
             onClick={addTag}
-            className="flex items-center gap-2 px-4 py-2.5 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors shrink-0"
+            className="flex items-center gap-2 px-4 py-2.5 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors shrink-0"
           >
             <Plus size={14} />
             Ekle
@@ -130,7 +130,7 @@ export default function BlogTagsPage() {
           </thead>
           <tbody className="divide-y divide-[var(--admin-border)]">
             {tags.sort((a, b) => b.count - a.count).map((tag) => (
-              <tr key={tag.id} className="hover:bg-white/5 transition-colors group">
+              <tr key={tag.id} className="hover:bg-[var(--admin-hover)] transition-colors group">
                 <td className="px-5 py-3.5">
                   <div className="flex items-center gap-2">
                     <Hash size={13} className="text-[var(--admin-accent)]" />

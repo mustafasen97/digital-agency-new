@@ -32,7 +32,7 @@ export default function UsersPage() {
         title="Kullanıcılar"
         description="Tüm kullanıcıları görüntüleyin ve yönetin"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Plus size={15} />
             Kullanıcı Ekle
           </button>
@@ -84,7 +84,7 @@ export default function UsersPage() {
           </thead>
           <tbody className="divide-y divide-[var(--admin-border)]">
             {filtered.map((user) => (
-              <tr key={user.id} className="hover:bg-white/5 transition-colors cursor-pointer group">
+              <tr key={user.id} className="hover:bg-[var(--admin-hover)] transition-colors cursor-pointer group">
                 <td className="px-5 py-3.5">
                   <div className="flex items-center gap-2.5">
                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[var(--admin-accent)]/30 to-[var(--admin-info)]/30 flex items-center justify-center shrink-0">
@@ -101,7 +101,7 @@ export default function UsersPage() {
                         ? "bg-[var(--admin-accent)]/15 text-[var(--admin-accent)] border-[var(--admin-accent)]/30"
                         : user.role === "Editor"
                         ? "bg-[var(--admin-info)]/15 text-[var(--admin-info)] border-[var(--admin-info)]/30"
-                        : "bg-white/5 text-[var(--admin-text-muted)] border-[var(--admin-border)]"
+                        : "bg-[var(--admin-bg-secondary)] text-[var(--admin-text-muted)] border-[var(--admin-border)]"
                     }`}
                   >
                     {user.role}

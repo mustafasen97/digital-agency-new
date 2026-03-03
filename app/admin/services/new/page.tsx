@@ -47,10 +47,10 @@ export default function NewServicePage() {
         backHref="/admin/services"
         action={
           <div className="flex items-center gap-2">
-            <button className="px-4 py-2 text-sm rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+            <button className="px-4 py-2 text-sm rounded-lg border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
               Taslak Kaydet
             </button>
-            <button className="px-4 py-2 text-sm rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold transition-colors">
+            <button className="px-4 py-2 text-sm rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold transition-colors">
               Yayınla
             </button>
           </div>
@@ -125,7 +125,7 @@ export default function NewServicePage() {
                 <button
                   key={s}
                   onClick={() => setStatus(s)}
-                  className={`flex-1 py-2 text-xs font-medium transition-colors ${status === s ? "bg-[var(--admin-accent)] text-black" : "text-[var(--admin-text-muted)] hover:bg-white/5"}`}
+                  className={`flex-1 py-2 text-xs font-medium transition-colors ${status === s ? "bg-[var(--admin-accent)] text-white" : "text-[var(--admin-text-muted)] hover:bg-[var(--admin-hover)]"}`}
                 >
                   {s === "draft" ? "Taslak" : "Yayında"}
                 </button>

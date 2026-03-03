@@ -42,7 +42,7 @@ export default function RegistrationPage() {
         title="Kayıt Ayarları"
         description="Üye kayıt seçeneklerini ve hoşgeldin e-postasını yapılandırın"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Save size={14} />
             Kaydet
           </button>
@@ -72,8 +72,8 @@ export default function RegistrationPage() {
           Hoşgeldin E-postası
         </h2>
         <p className="text-xs text-[var(--admin-text-muted)]">
-          Kullanılabilir değişkenler: <code className="text-[var(--admin-accent)] font-mono bg-white/5 px-1 rounded">{"{name}"}</code>{" "}
-          <code className="text-[var(--admin-accent)] font-mono bg-white/5 px-1 rounded">{"{email}"}</code>
+          Kullanılabilir değişkenler: <code className="text-[var(--admin-accent)] font-mono bg-[var(--admin-bg-secondary)] px-1 rounded">{"{name}"}</code>{" "}
+          <code className="text-[var(--admin-accent)] font-mono bg-[var(--admin-bg-secondary)] px-1 rounded">{"{email}"}</code>
         </p>
         <div>
           <label className={labelCls}>E-posta Konusu</label>

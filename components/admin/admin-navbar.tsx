@@ -91,7 +91,7 @@ export default function AdminNavbar() {
       </Link>
 
       {/* Notifications */}
-      <button className="relative p-2 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors">
+      <button className="relative p-2 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors">
         <Bell size={18} />
         <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[var(--admin-accent)]" />
         <span className="sr-only">Bildirimler</span>
@@ -100,7 +100,7 @@ export default function AdminNavbar() {
       {/* User menu */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="flex items-center gap-2.5 pl-1 pr-2 py-1 rounded-md hover:bg-white/5 transition-colors">
+          <button className="flex items-center gap-2.5 pl-1 pr-2 py-1 rounded-md hover:bg-[var(--admin-hover)] transition-colors">
             <div className="w-8 h-8 rounded-full bg-[var(--admin-accent)] flex items-center justify-center text-black font-bold text-sm shrink-0">
               M
             </div>
@@ -115,14 +115,14 @@ export default function AdminNavbar() {
           align="end"
           className="bg-[var(--admin-bg-card)] border-[var(--admin-border)] text-[var(--admin-text-primary)] w-48"
         >
-          <DropdownMenuItem className="text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] focus:bg-white/5 cursor-pointer">
+          <DropdownMenuItem className="text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] focus:bg-[var(--admin-hover)] cursor-pointer">
             Profilim
           </DropdownMenuItem>
-          <DropdownMenuItem className="text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] focus:bg-white/5 cursor-pointer" asChild>
+          <DropdownMenuItem className="text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] focus:bg-[var(--admin-hover)] cursor-pointer" asChild>
             <Link href="/admin/settings">Ayarlar</Link>
           </DropdownMenuItem>
           <DropdownMenuSeparator className="bg-[var(--admin-border)]" />
-          <DropdownMenuItem className="text-[var(--admin-danger)] focus:bg-white/5 cursor-pointer">
+          <DropdownMenuItem className="text-[var(--admin-danger)] focus:bg-[var(--admin-hover)] cursor-pointer">
             Çıkış Yap
           </DropdownMenuItem>
         </DropdownMenuContent>

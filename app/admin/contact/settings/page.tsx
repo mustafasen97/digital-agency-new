@@ -47,7 +47,7 @@ export default function ContactSettingsPage() {
         title="Form Ayarları"
         description="İletişim formu alanlarını ve bildirim ayarlarını yapılandırın"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Save size={14} />
             Kaydet
           </button>
@@ -71,7 +71,7 @@ export default function ContactSettingsPage() {
           </thead>
           <tbody className="divide-y divide-[var(--admin-border)]">
             {formFields.map((field) => (
-              <tr key={field.key} className="hover:bg-white/5 transition-colors">
+              <tr key={field.key} className="hover:bg-[var(--admin-hover)] transition-colors">
                 <td className="px-5 py-3.5">
                   <span className="text-sm text-[var(--admin-text-primary)] font-medium">{field.label}</span>
                 </td>

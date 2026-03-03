@@ -23,7 +23,7 @@ export default function AdminPageHeader({
         {backHref && (
           <Link
             href={backHref}
-            className="mt-0.5 p-1.5 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors"
+            className="mt-0.5 p-1.5 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors"
             aria-label="Geri dön"
           >
             <ArrowLeft size={16} />

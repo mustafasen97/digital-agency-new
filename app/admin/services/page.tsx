@@ -33,7 +33,7 @@ export default function ServicesPage() {
         title="Hizmetler"
         description="Site hizmetlerini yönetin ve sıralayın"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Plus size={15} />
             Yeni Hizmet
           </button>
@@ -69,9 +69,9 @@ export default function ServicesPage() {
               {filtered.map((svc) => {
                 const Icon = iconMap[svc.icon] || Globe
                 return (
-                  <tr key={svc.id} className="hover:bg-white/5 transition-colors group">
+                  <tr key={svc.id} className="hover:bg-[var(--admin-hover)] transition-colors group">
                     <td className="px-5 py-3.5">
-                      <span className="text-xs font-mono text-[var(--admin-text-muted)] bg-white/5 px-2 py-0.5 rounded">
+                      <span className="text-xs font-mono text-[var(--admin-text-muted)] bg-[var(--admin-bg-secondary)] px-2 py-0.5 rounded border border-[var(--admin-border)]">
                         #{svc.order}
                       </span>
                     </td>

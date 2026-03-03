@@ -26,7 +26,7 @@ export default function TeamPage() {
         title="Ekip Üyeleri"
         description="Sitede gösterilen ekip üyelerini yönetin"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Plus size={15} />
             Ekip Üyesi Ekle
           </button>
@@ -37,7 +37,7 @@ export default function TeamPage() {
         {members.map((member) => (
           <div
             key={member.id}
-            className="bg-[var(--admin-bg-card)] border border-[var(--admin-border)] rounded-xl px-5 py-4 flex items-center gap-4 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all group"
+            className="bg-[var(--admin-bg-card)] border border-[var(--admin-border)] rounded-xl px-5 py-4 flex items-center gap-4 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(37,99,235,0.08)] transition-all group"
           >
             {/* Avatar */}
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--admin-accent)]/30 to-[var(--admin-info)]/30 flex items-center justify-center shrink-0">
@@ -51,7 +51,7 @@ export default function TeamPage() {
             </div>
 
             {/* Order badge */}
-            <span className="text-xs font-mono text-[var(--admin-text-muted)] bg-white/5 px-2 py-0.5 rounded shrink-0">
+            <span className="text-xs font-mono text-[var(--admin-text-muted)] bg-[var(--admin-bg-secondary)] border border-[var(--admin-border)] px-2 py-0.5 rounded shrink-0">
               #{member.order}
             </span>
 

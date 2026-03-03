@@ -70,8 +70,8 @@ export default function ContactPage() {
                   onClick={() => setStatusFilter(f.key)}
                   className={`px-3 py-1.5 text-xs font-medium transition-colors ${
                     statusFilter === f.key
-                      ? "bg-[var(--admin-accent)] text-black"
-                      : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5"
+                      ? "bg-[var(--admin-accent)] text-white"
+                      : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]"
                   }`}
                 >
                   {f.label}
@@ -85,8 +85,8 @@ export default function ContactPage() {
               <div
                 key={msg.id}
                 onClick={() => { setSelected(msg); markRead(msg.id) }}
-                className={`flex items-start gap-3 px-4 py-3.5 cursor-pointer transition-colors hover:bg-white/5 ${
-                  selected?.id === msg.id ? "bg-white/5" : ""
+                className={`flex items-start gap-3 px-4 py-3.5 cursor-pointer transition-colors hover:bg-[var(--admin-hover)] ${
+                  selected?.id === msg.id ? "bg-[var(--admin-hover)]" : ""
                 } ${msg.status === "unread" ? "border-l-2 border-[var(--admin-accent)]" : "border-l-2 border-transparent"}`}
               >
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--admin-accent)]/20 to-[var(--admin-info)]/20 flex items-center justify-center shrink-0 mt-0.5">
@@ -136,7 +136,7 @@ export default function ContactPage() {
                 </h3>
                 <button
                   onClick={() => setSelected(null)}
-                  className="p-1.5 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5 transition-colors"
+                  className="p-1.5 rounded-md text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)] transition-colors"
                 >
                   <X size={15} />
                 </button>
@@ -188,7 +188,7 @@ export default function ContactPage() {
               <div className="px-5 py-4 border-t border-[var(--admin-border)] flex items-center gap-2">
                 <a
                   href={`mailto:${selected.email}?subject=Re: ${selected.subject}`}
-                  className="flex items-center gap-2 flex-1 justify-center px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black text-xs font-semibold rounded-lg transition-colors"
+                  className="flex items-center gap-2 flex-1 justify-center px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white text-xs font-semibold rounded-lg transition-colors"
                 >
                   <Reply size={13} />
                   Yanıtla

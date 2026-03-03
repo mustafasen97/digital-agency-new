@@ -80,7 +80,7 @@ export default function BlogPage() {
             </thead>
             <tbody className="divide-y divide-[var(--admin-border)]">
               {filtered.map((post) => (
-                <tr key={post.id} className="hover:bg-white/5 transition-colors group">
+                <tr key={post.id} className="hover:bg-[var(--admin-hover)] transition-colors group">
                   <td className="px-5 py-3.5">
                     <span className="text-[var(--admin-text-primary)] font-medium line-clamp-1 max-w-[220px] block">
                       {post.title}
@@ -95,7 +95,7 @@ export default function BlogPage() {
                   <td className="px-5 py-3.5">
                     <div className="flex gap-1 flex-wrap max-w-[120px]">
                       {post.tags.map((tag) => (
-                        <span key={tag} className="text-[10px] px-1.5 py-0.5 rounded bg-white/5 text-[var(--admin-text-muted)]">
+                        <span key={tag} className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--admin-bg-secondary)] border border-[var(--admin-border)] text-[var(--admin-text-muted)]">
                           #{tag}
                         </span>
                       ))}
@@ -137,9 +137,9 @@ export default function BlogPage() {
         <div className="flex items-center justify-between px-5 py-3 border-t border-[var(--admin-border)]">
           <p className="text-xs text-[var(--admin-text-muted)]">{filtered.length} sonuç gösteriliyor</p>
           <div className="flex items-center gap-1">
-            <button className="px-3 py-1.5 text-xs rounded border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:bg-white/5 transition-colors">Önceki</button>
+            <button className="px-3 py-1.5 text-xs rounded border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:bg-[var(--admin-hover)] transition-colors">Önceki</button>
             <button className="px-3 py-1.5 text-xs rounded border border-[var(--admin-accent)] bg-[var(--admin-accent)]/10 text-[var(--admin-accent)]">1</button>
-            <button className="px-3 py-1.5 text-xs rounded border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:bg-white/5 transition-colors">Sonraki</button>
+            <button className="px-3 py-1.5 text-xs rounded border border-[var(--admin-border)] text-[var(--admin-text-muted)] hover:bg-[var(--admin-hover)] transition-colors">Sonraki</button>
           </div>
         </div>
       </div>

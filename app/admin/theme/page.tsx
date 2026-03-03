@@ -37,7 +37,7 @@ export default function ThemePage() {
         title="Tema & Görünüm"
         description="Sitenin görsel kimliğini özelleştirin"
         action={
-          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black font-semibold text-sm rounded-lg transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white font-semibold text-sm rounded-lg transition-colors">
             <Save size={15} />
             Değişiklikleri Uygula
           </button>
@@ -52,8 +52,8 @@ export default function ThemePage() {
             onClick={() => setActiveTab(tab)}
             className={`flex-1 py-2 px-3 text-sm font-medium rounded-lg transition-colors ${
               activeTab === tab
-                ? "bg-[var(--admin-accent)] text-black"
-                : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-white/5"
+                ? "bg-[var(--admin-accent)] text-white"
+                : "text-[var(--admin-text-muted)] hover:text-[var(--admin-text-primary)] hover:bg-[var(--admin-hover)]"
             }`}
           >
             {tab === "colors" ? "Renkler" : tab === "typography" ? "Tipografi" : tab === "logo" ? "Logo & Favicon" : "Özel CSS"}
@@ -105,7 +105,7 @@ export default function ThemePage() {
                   >
                     <div className="flex gap-1.5 mb-2">
                       {[theme.bg, theme.primary, theme.text].map((c, i) => (
-                        <div key={i} className="w-5 h-5 rounded-full border border-white/10" style={{ backgroundColor: c }} />
+                        <div key={i} className="w-5 h-5 rounded-full border border-[var(--admin-border)]" style={{ backgroundColor: c }} />
                       ))}
                     </div>
                     <p className="text-xs font-medium text-[var(--admin-text-primary)] group-hover:text-[var(--admin-accent)] transition-colors">
@@ -171,7 +171,7 @@ export default function ThemePage() {
             </div>
 
             <div className="mt-4 flex gap-2">
-              <button className="flex-1 py-2 text-xs font-semibold rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-black transition-colors">
+              <button className="flex-1 py-2 text-xs font-semibold rounded-lg bg-[var(--admin-accent)] hover:bg-[var(--admin-accent-hover)] text-white transition-colors">
                 Değişiklikleri Uygula
               </button>
               <button className="px-3 py-2 text-xs rounded-lg border border-[var(--admin-border)] text-[var(--admin-danger)] hover:bg-[var(--admin-danger)]/10 transition-colors">
@@ -256,7 +256,7 @@ export default function ThemePage() {
               </div>
               <div>
                 <p className="text-[10px] text-[var(--admin-text-muted)] mb-1.5 uppercase tracking-wide">Buton</p>
-                <button className="px-4 py-2 text-sm font-bold rounded-lg bg-[var(--admin-accent)] text-black">
+                <button className="px-4 py-2 text-sm font-bold rounded-lg bg-[var(--admin-accent)] text-white">
                   Hemen Başlayın
                 </button>
               </div>
@@ -307,7 +307,7 @@ export default function ThemePage() {
                 <RotateCcw size={12} />
                 Varsayılana Döndür
               </button>
-              <button className="flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-lg bg-[var(--admin-accent)] text-black font-semibold hover:bg-[var(--admin-accent-hover)] transition-colors">
+              <button className="flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-lg bg-[var(--admin-accent)] text-white font-semibold hover:bg-[var(--admin-accent-hover)] transition-colors">
                 <Save size={12} />
                 CSS Kaydet
               </button>
