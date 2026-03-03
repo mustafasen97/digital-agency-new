@@ -1,43 +1,55 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark'
 
-interface ThemeContextType {
+export interface ThemeContextType {
   theme: Theme
   toggleTheme: () => void
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-export function AdminThemeProvider({ children }: { children: React.ReactNode }) {
+export function AdminThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light')
   const [mounted, setMounted] = useState(false)
 
-  // Load theme from localStorage on mount
   useEffect(() => {
+    // Check if we're in the browser
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    // Load theme from localStorage or system preference
     const stored = localStorage.getItem('admin-theme') as Theme | null
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     const initialTheme = stored || (prefersDark ? 'dark' : 'light')
+    
     setTheme(initialTheme)
-    applyTheme(initialTheme)
+    
+    // Apply theme to document
+    const root = document.documentElement
+    root.setAttribute('data-admin-theme', initialTheme)
+    
     setMounted(true)
   }, [])
 
-  const applyTheme = (newTheme: Theme) => {
+  const toggleTheme = () => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    
+    // Apply theme to document and localStorage
     const root = document.documentElement
     root.setAttribute('data-admin-theme', newTheme)
     localStorage.setItem('admin-theme', newTheme)
   }
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    applyTheme(newTheme)
-  }
-
-  // Prevent hydration mismatch
+  // Render children immediately but without theme context until mounted
   if (!mounted) {
     return <>{children}</>
   }

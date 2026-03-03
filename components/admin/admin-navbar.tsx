@@ -3,7 +3,8 @@
 import { Bell, Search, ChevronDown, ExternalLink, Moon, Sun } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useAdminTheme } from "@/lib/admin-theme-context"
+import { useContext } from "react"
+import { ThemeContext } from "@/lib/admin-theme-context"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -45,7 +46,12 @@ const breadcrumbMap: Record<string, string> = {
 
 export default function AdminNavbar() {
   const pathname = usePathname()
-  const { theme, toggleTheme } = useAdminTheme()
+  const themeContext = useContext(ThemeContext)
+  
+  // Fallback values if context is not available
+  const theme = themeContext?.theme || 'light'
+  const toggleTheme = themeContext?.toggleTheme || (() => {})
+  
   const segments = pathname.split("/").filter(Boolean)
 
   const breadcrumbs = segments.map((seg, i) => ({
