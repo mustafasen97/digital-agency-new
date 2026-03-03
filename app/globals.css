@@ -72,6 +72,24 @@
   }
 }
 
+/* ── Admin Panel Tokens ── */
+.admin-panel {
+  --admin-bg-primary: #0A0A0F;
+  --admin-bg-secondary: #111118;
+  --admin-bg-card: #16161F;
+  --admin-border: #1E1E2E;
+  --admin-accent: #F59E0B;
+  --admin-accent-hover: #D97706;
+  --admin-text-primary: #F8F8FF;
+  --admin-text-muted: #6B7280;
+  --admin-success: #10B981;
+  --admin-danger: #EF4444;
+  --admin-info: #3B82F6;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
 /* ── Keyframe Animations ── */
 
 @keyframes float {
